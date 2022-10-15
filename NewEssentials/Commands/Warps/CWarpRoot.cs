@@ -60,8 +60,8 @@ namespace NewEssentials.Commands.Warps
             if (!warpsData.Warps.ContainsKey(searchTerm))
                 throw new UserFriendlyException(m_StringLocalizer["warps:none", new {Warp = searchTerm}]);
 
-            if (await m_PermissionChecker.CheckPermissionAsync(Context.Actor, $"warps.{searchTerm}") == PermissionGrantResult.Deny)
-                throw new UserFriendlyException(m_StringLocalizer["warps:no_permission", new {Warp = searchTerm}]);
+            //if (await m_PermissionChecker.CheckPermissionAsync(Context.Actor, $"warps.{searchTerm}") == PermissionGrantResult.Deny)
+                //throw new UserFriendlyException(m_StringLocalizer["warps:no_permission", new {Warp = searchTerm}]);
 
             UnturnedUser uPlayer = (UnturnedUser) Context.Actor;
             var warp = warpsData.Warps[searchTerm];
