@@ -43,11 +43,7 @@ namespace NewEssentials.Commands.Warps
                 StringBuilder warpsBuilder = new StringBuilder();
                 foreach (string warp in warpsData.Warps.Keys)
                 {
-                    if (await m_PermissionChecker.CheckPermissionAsync(Context.Actor, $"warps.{warp}") ==
-                        PermissionGrantResult.Grant)
-                    {
-                        warpsBuilder.Append(warp + ", ");
-                    }
+                     warpsBuilder.Append(warp + ", ");
                 }
 
                 if (warpsBuilder.Length != 0)
